@@ -31,10 +31,10 @@ let costbetween = [];
 
 for (i = 0; i < data.length; i++){
   if (data[i].price >= 14.00 && data[i].price <= 18.00){
-    costbetween.push(data[i].title)
+    costbetween.push(data[i].title + "\n")
   }
 }
-console.log(costbetween);
+console.log(costbetween + "\n");
 }
 
 
@@ -50,7 +50,7 @@ function question3 () {
       current.push(data[i].title + " cost " + data[i].price + " pounds.")
     }
   }
-  console.log(current);
+  console.log(current + "\n");
 }
 
 
@@ -63,12 +63,12 @@ let madeofwood = [];
   for (i = 0; i < data.length; i++){
       for (w = 0; w < data[i].materials.length; w++){
         if (data[i].materials[w] === "wood"){
-          madeofwood.push(data[i].title);
+          madeofwood.push(data[i].title + "\n");
         }
       }
 
   }
-  console.log(madeofwood);
+  console.log(madeofwood + "\n");
 }
 
 
@@ -82,11 +82,11 @@ function question5 () {
   for (i = 0; i < data.length; i++){
       // for (w = 0; w < data[i].materials.length; w++){
         if (data[i].materials.length >= 8){
-          buncha.push(data[i].title + " has " + data[i].materials.length + " materials:" + data[i].materials);
+          buncha.push(data[i].title + " has " + data[i].materials.length + " materials:" + "\n\n" + data[i].materials + "\n\n");
         }
       // }
   }
-  console.log(buncha);
+  console.log("\n\n" + buncha);
 }
 
 
