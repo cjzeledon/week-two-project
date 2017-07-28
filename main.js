@@ -82,7 +82,7 @@ function question5 () {
   for (i = 0; i < data.length; i++){
       // for (w = 0; w < data[i].materials.length; w++){
         if (data[i].materials.length >= 8){
-          buncha.push(data[i].title);
+          buncha.push(data[i].title + " has " + data[i].materials.length + " materials:" + data[i].materials);
         }
       // }
   }
@@ -94,4 +94,14 @@ function question5 () {
 // Answer:
 function question6 () {
   // Answer:
+
+  let ifreakindidit = 0;
+
+  for (i = 0; i < data.length; i++){
+    if (data[i].who_made === "i_did") {
+      ifreakindidit = ifreakindidit + 1;
+
+    }
+  }
+  console.log(ifreakindidit + " items were made by their sellers")
 }
