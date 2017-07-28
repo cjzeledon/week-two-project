@@ -2,7 +2,7 @@
 // you have access to the `data` variable that contains the Etsy Store data.
 // Open your `index.html` page in your browser and you can verify that the following
 // is properly working. The `data` variable is an array with 25 items in it
-console.log(data);
+// console.log(data);
 
 // data = [{}]
 // This data contains an array of an object literals
@@ -27,6 +27,14 @@ let avg = 0;
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2 () {
   // Answer:
+let costbetween = [];
+
+for (i = 0; i < data.length; i++){
+  if (data[i].price >= 14.00 && data[i].price <= 18.00){
+    costbetween.push(data[i].title)
+  }
+}
+console.log(costbetween);
 }
 
 
@@ -34,12 +42,33 @@ function question2 () {
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3 () {
   // Answer:
+
+  let current = [];
+
+  for (i = 0; i < data.length; i++){
+    if (data[i].currency_code === "GBP"){
+      current.push(data[i].title + " cost " + data[i].price + " pounds.")
+    }
+  }
+  console.log(current);
 }
 
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
   // Answer:
+
+let madeofwood = [];
+
+  for (i = 0; i < data.length; i++){
+      for (w = 0; w < data[i].materials.length; w++){
+        if (data[i].materials[w] === "wood"){
+          madeofwood.push(data[i].title);
+        }
+      }
+
+  }
+  console.log(madeofwood);
 }
 
 
@@ -47,6 +76,17 @@ function question4 () {
 //    Display the name, number of items and the items it is made of.
 function question5 () {
   // Answer:
+
+  let buncha = [];
+
+  for (i = 0; i < data.length; i++){
+      // for (w = 0; w < data[i].materials.length; w++){
+        if (data[i].materials.length >= 8){
+          buncha.push(data[i].title);
+        }
+      // }
+  }
+  console.log(buncha);
 }
 
 
