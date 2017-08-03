@@ -10,6 +10,19 @@
 // data[data.price] <-- That doesn't work
 // data[0].price <--- That works since it gives me the value of price which is 12.00
 
+console.log(data);
+
+function listingtags(){
+  let listmaterials = [];
+
+  for (i = 0; i < data.length; i++){
+    listmaterials = data[i].materials.pop();
+    listmaterials = data[i].materials.pop() + listmaterials;
+    return listingtags; 
+  }
+  console.log(listmaterials)
+}
+
 // 1: Show me how to calculate the average price of all items.
 function question1 () {
   // Answer:
@@ -50,7 +63,7 @@ function question3 () {
       current.push(data[i].title + " cost " + data[i].price + " pounds.")
     }
   }
-  console.log(current + "\n");
+  console.log(current);
 }
 
 
@@ -82,11 +95,11 @@ function question5 () {
   for (i = 0; i < data.length; i++){
       // for (w = 0; w < data[i].materials.length; w++){
         if (data[i].materials.length >= 8){
-          buncha.push(data[i].title + " has " + data[i].materials.length + " materials:" + "\n\n" + data[i].materials + "\n\n");
+          buncha.push(data[i].title + " has " + data[i].materials.length + " materials:" + data[i].materials);
         }
       // }
   }
-  console.log("\n\n" + buncha);
+  console.log(buncha);
 }
 
 
